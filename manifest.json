@@ -1,0 +1,26 @@
+{
+    "name": "Which Device",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "description": "Modifica o cabeçalho HTTP simulando o CachOS da globo.",
+    "homepage_url": "http://ngit.globoi.com/which_device/which_device",
+    // "icons": {
+    //     "16": "icon16.png",
+    //     "48": "icon48.png",
+    //     "128": "icon128.png"
+    // },
+    "options_page": "options.html",
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": "icone.png",
+        "default_popup": "options.html"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs"
+    ]
+}

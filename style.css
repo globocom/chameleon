@@ -1,0 +1,21 @@
+#control_panel {
+    font-family:Arial,sans-serif;
+    width:300px;
+}
+#control_panel h1 {
+    color:#666;
+    font-size:15pt;
+    font-weight:bold;
+}
+}
+#control_panel ul {
+    list-style-type: none;
+    list-style: none
+    margin:0px 0px 8px 0px;
+    padding:0px;
+}
+#control_panel li {
+    margin:0px 4px 0px 0px;
+    padding:0px;
+    white-space:nowrap;
+}
