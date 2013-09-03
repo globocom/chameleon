@@ -14,7 +14,8 @@
     "mocha":"",
     "mocha-phantomjs":"",
     "phantomjs":"",
-    "chai":""
+    "chai":"",
+    "sinon":""
   },
   "author": "Mobile Globo.com",
   "license": "BSD",
