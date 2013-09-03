@@ -1,9 +1,9 @@
 {
-    "name": "Which Device",
+    "name": "Chameleon",
     "manifest_version": 2,
     "version": "0.0.1",
-    "description": "Modifica o cabeçalho HTTP simulando o CachOS da globo.",
-    "homepage_url": "http://ngit.globoi.com/which_device/which_device",
+    "description": "",
+    "homepage_url": "https://github.com/globocom/chameleon",
     // "icons": {
     //     "16": "icon16.png",
     //     "48": "icon48.png",
