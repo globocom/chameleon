@@ -22,5 +22,10 @@
         "webRequestBlocking",
         "<all_urls>",
         "tabs"
+    ],
+    "content_scripts": [{
+      "matches": ["*://*/*"],
+      "js": ["resize.js"]
+    }
     ]
 }
