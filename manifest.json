@@ -9,13 +9,13 @@
     //     "48": "icon48.png",
     //     "128": "icon128.png"
     // },
-    "options_page": "options.html",
+    "options_page": "addeventClick.html",
     "background": {
         "page": "background.html"
     },
     "browser_action": {
         "default_icon": "icone.png",
-        "default_popup": "options.html"
+        "default_popup": "addeventClick.html"
     },
     "permissions": [
         "webRequest",
