@@ -1,0 +1,27 @@
+{
+  "name": "chameleon",
+  "version": "0.0.0",
+  "description": "wich devices",
+  "main": "background.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/globocom/chameleon.git"
+  },
+  "dependencies" : {
+    "bower":""
+  },
+  "devDependencies" : {
+    "mocha":"",
+    "mocha-phantomjs":"",
+    "phantomjs":"",
+    "chai":"",
+    "sinon":""
+  },
+  "author": "Mobile Globo.com",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "c794a8f67ef479f50912781a46693709c3e00bb1"
+}
