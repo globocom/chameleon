@@ -17,15 +17,19 @@
     <script>
       mocha.ui('bdd');
       mocha.reporter('html');
-      expect = chai.expect;
-    </script>
-    
-    <script src="../jquery-1.10.2.min.js"></script>
-    <script src="../options.js"></script>
-    
+      assert = chai.assert;
 
-    <script src="test.options.js"></script>
-    
+      chrome={
+          webRequest:{onBeforeSendHeaders:{addListener:function(){this.argumentos_passados_para_addListener = arguments}}},
+          runtime:{onMessage:{addListener:function(){this.argumentos_passados_para_addListener = arguments}}}
+      }
+
+    </script>
+
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script src="../background.js"></script>
+
+    <script src="test.background.js"></script>
 
     <script>
       if (window.mochaPhantomJS) { mochaPhantomJS.run(); }

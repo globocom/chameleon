@@ -5,7 +5,7 @@ var requestFilter = {
 };
 
 
-chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
+var listenerSendHeader = function(details) {
     var headers = details.requestHeaders;
     var group = localStorage['X-Mobile-Group'] || 'desktop';
     var header = {
@@ -14,15 +14,15 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
     };
     headers.push(header);
     return {requestHeaders: headers};
-}, requestFilter, ['requestHeaders','blocking']);
+};
 
 
-var group = localStorage['X-Mobile-Group'] || 'desktop';
-
-
-chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
+var listenerSendMenssage = function(message, sender, sendResponse){
+    var group = localStorage['X-Mobile-Group'] || 'desktop';
     if (message.storage == "group"){
         sendResponse({group: group});
     }
-});
+}
 
+chrome.webRequest.onBeforeSendHeaders.addListener(listenerSendHeader, requestFilter, ['requestHeaders','blocking']);
+chrome.runtime.onMessage.addListener(listenerSendMenssage);
