@@ -3,6 +3,8 @@ var requestFilter = {
         "<all_urls>"
     ]
 };
+
+
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
     var headers = details.requestHeaders;
     var group = localStorage['X-Mobile-Group'] || 'desktop';
@@ -13,3 +15,14 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
     headers.push(header);
     return {requestHeaders: headers};
 }, requestFilter, ['requestHeaders','blocking']);
+
+
+var group = localStorage['X-Mobile-Group'] || 'desktop';
+
+
+chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
+    if (message.storage == "group"){
+        sendResponse({group: group});
+    }
+});
+
