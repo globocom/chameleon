@@ -11,6 +11,9 @@
     "url": "git://github.com/globocom/chameleon.git"
   },
   "dependencies" : {
+    "bower":""
+  },
+  "devDependencies" : {
     "mocha":"",
     "mocha-phantomjs":"",
     "phantomjs":"",
