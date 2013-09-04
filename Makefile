@@ -1,9 +1,12 @@
-test-option:
-	@mocha-phantomjs -R spec test/option.html
+#creating mocha-phantom variable
+mocha-phantomjs = node_modules/mocha-phantomjs/bin/mocha-phantomjs
+
+test-addeventclick:
+	$(mocha-phantomjs) -R spec test/addeventClick.html
 
 test-background:
-	@mocha-phantomjs -R spec test/background.html
+	$(mocha-phantomjs) -R spec test/background.html
 
 run-tests:
-	make test-option
+	make test-addeventclick
 	make test-background
