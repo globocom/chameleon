@@ -7,23 +7,31 @@
     <div id="mocha"></div>
     <span id="group"></span>
     <ul id="group_list">
-      <li><a href="#">desktop</a></li>  
+      <li><a href="#">desktop</a></li>
+      <li><a href="#">tablet</a></li>
+      <li><a href="#">smart</a></li>
+      <li><a href="#">feature</a></li>
     </ul>
     <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/sinon/pkg/sinon.js"></script>
     
     <script>
+
       mocha.ui('bdd');
       mocha.reporter('html');
       var assert = chai.assert;
+      chrome={
+          runtime:{ sendMessage: function(){this.argumentos_passados_para_sendMessage = arguments} }
+      };
+
+      window={ open: function(){ this.argumentos_passados_para_open = arguments } };
 
     </script>
     
     <script src="../jquery-1.10.2.min.js"></script>
-    <script src="../addeventclick.js"></script> 
-    
-    <script src="test.addeventclick.js"></script>
-    
+    <script src="../resize.js"></script>
+    <script src="test.resize.js"></script>
 
     <script>
       if (window.mochaPhantomJS) { mochaPhantomJS.run(); }

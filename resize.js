@@ -1,4 +1,4 @@
-chrome.runtime.sendMessage({storage: "group"}, function(response) {
+var screenMessage =  function(response) {
     var sizes = {
       feature: [319, 500],
       smart: [500, 500],
@@ -15,5 +15,6 @@ chrome.runtime.sendMessage({storage: "group"}, function(response) {
             "POPUP",
             "width="+ windowWidth+",height="+windowHeight +",left="+xPos+",top="+yPos);
     }
-});
+};
 
+chrome.runtime.sendMessage({storage: "group"}, screenMessage );
