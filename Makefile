@@ -7,6 +7,9 @@ bower = node_modules/.bin/bower
 npm-install:
 	npm install
 
+npm-update:
+	npm install
+
 bower-install:
 	$(bower) install
 
