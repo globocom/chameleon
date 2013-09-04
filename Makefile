@@ -2,7 +2,7 @@
 mocha-phantomjs = node_modules/mocha-phantomjs/bin/mocha-phantomjs
 
 test-addeventclick:
-	$(mocha-phantomjs) -R spec test/addeventClick.html
+	$(mocha-phantomjs) -R spec test/addeventclick.html
 
 test-background:
 	$(mocha-phantomjs) -R spec test/background.html
