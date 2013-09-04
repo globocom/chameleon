@@ -1,5 +1,17 @@
 #creating mocha-phantom variable
+
+
 mocha-phantomjs = node_modules/mocha-phantomjs/bin/mocha-phantomjs
+bower = node_modules/.bin/bower
+
+npm-install:
+	npm install
+
+npm-update:
+	npm install
+
+bower-install:
+	$(bower) install
 
 test-addeventclick:
 	$(mocha-phantomjs) -R spec test/addeventclick.html

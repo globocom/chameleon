@@ -7,7 +7,7 @@ describe('Background', function () {
     it("deve ser definido o requestFilter para todas as URL", function(){
         assert.equal(requestFilter.urls[0], "<all_urls>")
     });
-    
+
     it("listenerSendHeader deve adicionar o cabeçalho HTTP indicando o grupo mobile", function(){
         var details = {requestHeaders: []};
 
@@ -37,6 +37,7 @@ describe('Background', function () {
         listenerSendMenssage({storage: "group"}, "sender dummy", sendResponse);
         assert.equal(resposta_enviada.group, "desktop")
     });
+
     it("listenerSendMenssage deve enviar uma mensagem contendo o grupo mobile definida no localStorage para o contexto da página", function(){
         localStorage['X-Mobile-Group'] = 'feature';
         var resposta_enviada;
