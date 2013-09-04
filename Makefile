@@ -4,6 +4,9 @@
 mocha-phantomjs = node_modules/mocha-phantomjs/bin/mocha-phantomjs
 bower = node_modules/.bin/bower
 
+npm-install:
+	npm install
+
 bower-install:
 	$(bower) install
 
