@@ -1,5 +1,6 @@
 describe('addeventClick', function () {
-	beforeEach(function(){
+	
+    beforeEach(function(){
 		var link = document.querySelectorAll("#group_list a")
     	link[0].onclick();
 	});
