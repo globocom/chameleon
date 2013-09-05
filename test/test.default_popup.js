@@ -2,7 +2,7 @@ template = document.querySelector("template").cloneNode(true);
 
 chrome = {
     tabs: {
-        getSelected: function(_, callback) {
+        getSelected: function(dummy, callback) {
             callback({url: "http://google.com"})
         }
     }
@@ -38,7 +38,7 @@ describe('defaultpopup', function () {
         this.link_tablet.onclick();
         var img_tablet = document.querySelector('#group_tablet img');
         img_tablet.onclick();
-        assert.include(window.open.getCall(0).args[2], "width=171,height=171");
+        assert.include(window.open.getCall(0).args[2], "width=22,height=171");
     });
     
 });

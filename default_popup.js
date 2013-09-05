@@ -12,7 +12,7 @@ options = {
         };
         for (var i=0; i < this.nodesDevices.length; i++) {
             this.nodesDevices[i].onclick = function(){
-                that.open();
+                that.open(this.dataset.width, this.dataset.height);
             }
         };
     },
@@ -40,7 +40,8 @@ options = {
         windowWidth = windowWidth || 171;
         windowHeight = windowHeight || 171;
         chrome.tabs.getSelected(null, function(tab) {
-            that.popup = window.open(tab.url,"POPUP","width=171,height=171");
+            that.popup = window.open(tab.url,"POPUP","width="+windowWidth+",height="+windowHeight);
         });
     }
 }
+options.init()

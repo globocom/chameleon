@@ -10,13 +10,12 @@
             <div id="mocha"></div>
             <div id="group_list">
                 <h1>Devices: <span id="group"></span></h1>
-
                 <a  id="tablet" >tablet</a>
             </div>
 
             <menu id="group_tablet" class="escondido">
-                <img src="devices/gt-n5120.jpg"  />
-                <img src="devices/ipad 2.jpg"  />
+                <img src="devices/gt-n5120.jpg" data-width="22" data-height="171" />
+                <img src="devices/ipad 2.jpg" data-width="768" data-height="1024" />
             </menu>
         </template>
     </div>
@@ -24,9 +23,9 @@
     <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
     <script src="../node_modules/sinon/pkg/sinon.js"></script>
-    
-    
+
     <script>
+
       mocha.ui('bdd');
       mocha.reporter('html');
       var assert = chai.assert;
@@ -34,9 +33,8 @@
     </script>
 
     <script src="../default_popup.js"></script> 
-    
+
     <script src="test.default_popup.js"></script>
-    
 
     <script>
       if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
