@@ -13,16 +13,13 @@ npm-update:
 bower-install:
 	$(bower) install
 
-test-addeventclick:
-	$(mocha-phantomjs) -R spec test/addeventclick.html
+test-default_popup:
+	$(mocha-phantomjs) -R spec test/default_popup.html
 
 test-background:
 	$(mocha-phantomjs) -R spec test/background.html
 
-test-resize:
-	$(mocha-phantomjs) -R spec test/resize.html	
 
 run-tests:
-	make test-addeventclick
+	make test-default_popup
 	make test-background
-	make test-resize

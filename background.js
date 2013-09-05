@@ -1,3 +1,4 @@
+
 var requestFilter = {
     urls: [
         "<all_urls>"
@@ -26,3 +27,5 @@ var listenerSendMenssage = function(message, sender, sendResponse){
 
 chrome.webRequest.onBeforeSendHeaders.addListener(listenerSendHeader, requestFilter, ['requestHeaders','blocking']);
 chrome.runtime.onMessage.addListener(listenerSendMenssage);
+
+

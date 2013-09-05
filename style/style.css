@@ -42,3 +42,7 @@
 #feature {
     background-image: url("/icones/feature.png");
 }
+
+.escondido {
+    display: none;
+}

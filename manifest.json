@@ -9,23 +9,18 @@
         "48": "/icones/mobile_48.png",
         "128": "/icones/mobile_128.png"
     },
-    "options_page": "addeventclick.html",
+    "options_page": "default_popup.html",
     "background": {
         "page": "background.html"
     },
     "browser_action": {
         "default_icon": "/icones/mobile_16.png",
-        "default_popup": "addeventclick.html"
+        "default_popup": "default_popup.html"
     },
     "permissions": [
         "webRequest",
         "webRequestBlocking",
         "<all_urls>",
         "tabs"
-    ],
-    "content_scripts": [{
-      "matches": ["*://*/*"],
-      "js": ["resize.js"]
-    }
     ]
 }
