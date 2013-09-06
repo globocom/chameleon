@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 #control_panel {
     font-family:Arial,sans-serif;
     width:300px;
@@ -45,4 +49,42 @@
 
 .escondido {
     display: none;
+}
+
+
+#group_list {
+    height: 79px;
+    padding: 9px;
+    background: url("/style/borda_filtro.gif") repeat-x bottom;
+}
+#group_list:before {
+    background: url("/style/setinha_indicadora_filtro.gif") no-repeat;
+    display: block;
+    width: 17px;
+    margin-right: -17px;
+    height: 14px;
+    margin-bottom: -14px;
+    position: relative;
+    bottom: -83px;
+    content: "";
+    -webkit-transition-duration: 0.1s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0.05s;
+}
+#group_list.smart:before {
+        right: -170px;
+}
+#group_list.feature:before {
+        right: -240px;
+}
+#group_list.tablet:before {
+        right: -103px;
+}
+#group_list.desktop:before {
+        display: none;
+}
+
+
+menu img {
+    margin-left: 20px;
 }

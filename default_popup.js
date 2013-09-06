@@ -4,6 +4,8 @@ options = {
         var that = this;
         that.get_nodes();
         that.atualizarGroup();
+        document.querySelector("#group_list").setAttribute("class", this.group)
+        that.abrirMenuDeDevices();
         for (var i=0; i < this.linksMenu.length; i++) {
             this.linksMenu[i].onclick = function(){
                 that.atualizarGroup(this.textContent);
@@ -18,7 +20,6 @@ options = {
     },
     get_nodes: function(){
           this.linksMenu = document.querySelectorAll("#group_list a");
-          this.groupNode = document.querySelector("#group");
           this.nodesMenu = document.querySelectorAll("menu");
           this.nodesDevices = document.querySelectorAll("menu img");
   
@@ -26,7 +27,7 @@ options = {
     atualizarGroup: function(group){
         this.group = group || this.group;
         localStorage['X-Mobile-Group'] = this.group;
-        this.groupNode.textContent = this.group;
+        document.querySelector("#group_list").setAttribute("class", group)
     },
     abrirMenuDeDevices: function(){
         for (var i=0; i < this.nodesMenu.length; i++) {

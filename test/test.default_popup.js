@@ -16,9 +16,9 @@ describe('defaultpopup', function () {
         this.link_tablet = document.querySelector("#tablet");
     })
 
-    it('deve selecionar desktop como grupo ao clicar no link', function() {
+    it('deve selecionar tablet como grupo ao clicar no link', function() {
         this.link_tablet.onclick();
-        assert.equal(document.querySelector('#group').textContent, 'tablet');
+        assert.equal(localStorage['X-Mobile-Group'], 'tablet');
     });
 
     it('deve setar o localStorage para desktop', function() {
