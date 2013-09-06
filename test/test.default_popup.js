@@ -1,12 +1,5 @@
 template = document.querySelector("template").cloneNode(true);
 
-chrome = {
-    tabs: {
-        getSelected: function(dummy, callback) {
-            callback({url: "http://google.com"})
-        }
-    }
-}
 
 describe('defaultpopup', function () {
 
@@ -26,20 +19,5 @@ describe('defaultpopup', function () {
         assert.equal(localStorage['X-Mobile-Group'], 'tablet');
     });
 
-    it('deve mostrar as imagens para tablet removendo a class escondido', function() {
-        var group_tablet_node = document.querySelector('#group_tablet');
-        assert.equal(group_tablet_node.getAttribute('class'), 'escondido');
-        this.link_tablet.onclick();
-        assert.isNull(group_tablet_node.getAttribute('class'));
-    });
-
-    it('deve abrir um popup com a página atual ao clicar em um tablet', function() {
-        window.open = sinon.spy();
-        this.link_tablet.onclick();
-        var img_tablet = document.querySelector('#group_tablet img');
-        img_tablet.onclick();
-        assert.include(window.open.getCall(0).args[2], "width=22,height=171");
-    });
-    
 });
 
