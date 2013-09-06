@@ -14,10 +14,14 @@ describe('defaultpopup', function () {
         assert.equal(localStorage['X-Mobile-Group'], 'tablet');
     });
 
-    it('deve setar o localStorage para desktop', function() {
+    it('deve setar o localStorage para tablet', function() {
         this.link_tablet.onclick();
         assert.equal(localStorage['X-Mobile-Group'], 'tablet');
     });
 
+    it('deve setar o titulo para tablet', function() {
+        this.link_tablet.onclick();
+        assert.equal(document.querySelector("h1").textContent, 'tablet');
+    });
 });
 
