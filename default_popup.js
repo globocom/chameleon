@@ -8,7 +8,6 @@ options = {
         for (var i=0; i < this.linksMenu.length; i++) {
             this.linksMenu[i].onclick = function(){
                 that.atualizarGroup(this.textContent);
-                console.log(that);
                 chrome.tabs.reload();
             }
         };
