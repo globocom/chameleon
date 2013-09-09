@@ -25,6 +25,16 @@
       mocha.reporter('html');
       var assert = chai.assert;
 
+      chrome = {
+        tabs: {
+          reload: function() {
+            this.arguments = 'reload';
+          }
+        }
+      }
+ 
+
+
     </script>
 
     <script src="../default_popup.js"></script> 

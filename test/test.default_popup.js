@@ -23,5 +23,10 @@ describe('defaultpopup', function () {
         this.link_tablet.onclick();
         assert.equal(document.querySelector("h1").textContent, 'tablet');
     });
+
+    it('deve verificar se o reload foi executado', function() {
+        this.link_tablet.onclick();
+        assert.include(chrome.tabs.arguments, 'reload');
+    })
 });
 
